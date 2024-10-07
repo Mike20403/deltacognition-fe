@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*:root {*/
+/*  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  font-synthesis: none;*/
+/*  text-rendering: optimizeLegibility;*/
+/*  -webkit-font-smoothing: antialiased;*/
+/*  -moz-osx-font-smoothing: grayscale;*/
+/*}*/
+
+body {
+  margin: 0;
+  background: url('/src/assets/bg_erp.jpg');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* This ensures the default dragging cursor only applies to the background */
+.react-flow__pane {
+  cursor: grab;
+}
+
+/* When hovering over a node, the cursor changes to a pointer */
+.react-flow__node {
+  cursor: pointer;
+}
+
+/* When hovering over an edge, the cursor changes to pointer */
+.react-flow__edge-path {
+  cursor: pointer;
+}
+
+/* When dragging a node, show the grabbing hand */
+.react-flow__node-dragging {
+  cursor: grabbing !important;
+}
+
+/* Disable drag while hovering over node or edge, allow drag only on background */
+.react-flow__node:hover,
+.react-flow__edge-path:hover {
+  cursor: pointer !important;
+}
