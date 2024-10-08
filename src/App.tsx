@@ -24,7 +24,13 @@ function App() {
         setDeviceData(data);
       }
     });
+
+    return () => {
+      webSocketClient.current?.close();
+      webSocketClient.current = null;
+    };
   }, []);
+
   return (
     <>
       <div className="App">
